@@ -1,0 +1,11 @@
+// Global Styles Here!
+section#body-content {
+    min-height: calc(100vh - 64px);
+}
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
+a:focus, button:focus {
+    outline: none;
+}
