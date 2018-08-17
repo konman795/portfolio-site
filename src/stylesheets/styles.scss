@@ -12,4 +12,11 @@
 
 header {
     background-color: $primary;
+    color: white;
+    padding: 0.5rem 0;
+}
+footer {
+    background-color: $accent;
+    color: white;
+    padding: 1rem 0;
 }
