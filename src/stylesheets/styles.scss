@@ -11,11 +11,11 @@
 
 @import '../stylesheets/variables';
 @import '../stylesheets/global';
+@import '../stylesheets/shame';
 
 mat-sidenav {
     width: 250px;
 }
-
 header {
     background-color: $primary;
     color: white;
@@ -23,6 +23,9 @@ header {
 
     #hamburger-icon {
         font-size: 1.2rem;
+    }
+    .mat-button {
+        font-size: 1rem;
     }
 }
 footer {

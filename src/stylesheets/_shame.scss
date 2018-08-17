@@ -1,0 +1,12 @@
+// Remove the focus overlay after tapping the mobile sidenav toggle
+// https://github.com/angular/material2/issues/11403
+.cdk-focused.cdk-program-focused {
+    .mat-button-focus-overlay {
+        background-color: transparent !important;
+    }
+}
+// Remove focusing of first list element after navigating in the mobile sidenav panel
+// https://github.com/angular/material2/issues/3215
+.mat-list-item-focus {
+    background-color: inherit !important;
+}

@@ -11,11 +11,13 @@ import { NavItem } from '../models/navItem.model';
 })
 export class HeaderComponent implements OnInit {
   navItems: NavItem[];
+  linkedInURL = '';
 
   constructor(private appService: AppService) { }
 
   ngOnInit() {
     this.navItems = this.appService.getNavItems();
+    this.linkedInURL = this.appService.getLinkedInURL();
   }
 
   onToggleSideNav() {

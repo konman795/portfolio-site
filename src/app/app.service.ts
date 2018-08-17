@@ -4,6 +4,10 @@ import { NavItem } from './models/navItem.model';
 
 export class AppService {
     appSidenav: MatSidenav;
+    private linkedInURL = 'https://www.linkedin.com/in/kon-kon-c-19336875/';
+    private fbURL = '';
+    private twitterURL = '';
+    private instagramURL = '';
     private navItems: NavItem[] = [
         new NavItem('Home', '/', 'home', 'green'),
         new NavItem('About Me', 'about', 'info', 'orange'),
@@ -27,5 +31,9 @@ export class AppService {
 
     toggleSideNav() {
         this.appSidenav.toggle();
+    }
+
+    getLinkedInURL() {
+        return this.linkedInURL;
     }
 }
