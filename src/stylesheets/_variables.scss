@@ -1,3 +1,4 @@
+/*** Site theme colors ***/
 $app-primary: mat-palette($mat-indigo);
 $app-accent:  mat-palette($mat-pink);
 $app-warn:    mat-palette($mat-red);
@@ -5,3 +6,19 @@ $app-warn:    mat-palette($mat-red);
 $primary: mat-color($app-primary);
 $accent: mat-color($app-accent);
 $warn: mat-color($app-warn);
+
+/*** Material colors ***/
+
+$material-red: mat-palette($mat-red);
+$material-green: mat-palette($mat-green);
+$material-blue: mat-palette($mat-blue);
+$material-purple: mat-palette($mat-purple);
+$material-orange: mat-palette($mat-orange);
+$material-gray: mat-palette($mat-gray);
+
+$m-red: mat-color($material-red);
+$m-green: mat-color($material-green);
+$m-blue: mat-color($material-blue);
+$m-purple: mat-color($material-purple);
+$m-orange: mat-color($material-orange);
+$m-gray: mat-color($material-gray);

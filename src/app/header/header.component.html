@@ -1,25 +1,22 @@
-<header class="mat-elevation-z6 mat-typography">
+<header class="mat-elevation-z6">
   <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-md-auto">
-        <h2 class="mb-0"><strong>Kon-Kon</strong> Chao</h2>
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto pr-0 d-block d-md-none">
+        <a mat-icon-button id="hamburger-icon" class="d-inline-block d-md-none" (click)="onToggleSideNav()">
+          <i class="fas fa-bars"></i>
+        </a>
       </div>
-      <div class="col-md text-center">
-        <button mat-button routerLink="home">
-          <span>Home</span>
-        </button>
-        <button mat-button routerLink="about">
-          <span>About Me</span>
-        </button>
-        <button mat-button routerLink="portfolio">
-          <span>Portfolio</span>
-        </button>
-        <button mat-button routerLink="contact">
-          <span>Contact</span>
+      <div class="col col-md-auto col-lg-2">
+        <h2 class="d-inline-block mb-0"><strong>Kon-Kon</strong> Chao</h2>
+        <!-- <h2 class="d-inline-block mb-0"><strong>Test</strong> Company</h2> -->
+      </div>
+      <div class="col-md-auto col-lg d-none d-md-block text-lg-center">
+        <button mat-button [routerLink]="[navItem.link]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngFor="let navItem of navItems">
+          <span>{{ navItem.name }}</span>
         </button>
       </div>
-      <div class="col-md-auto">
-        <a mat-icon-button matTooltip="Check out my LinkedIn" matTooltipPosition="left" aria-label="Visit my LinkedIn profile page">
+      <div class="col-auto col-lg-2 text-lg-right">
+        <a mat-icon-button target="_blank">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>

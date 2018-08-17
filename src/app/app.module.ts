@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +17,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +40,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     MatCardModule,
     MatTooltipModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

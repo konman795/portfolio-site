@@ -1,0 +1,28 @@
+<div id="navSidebar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div class="col pl-0">
+        <div class="d-inline-block">
+          <span>Where to?</span>
+        </div>
+      </div>
+      <div class="col-auto pr-0">
+        <a (click)="onClose()">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-nav-list>
+      <a mat-list-item [routerLink]=[sideNavItem.link] routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" *ngFor="let sideNavItem of sideNavItems" (click)="onNavigate()" #rla="routerLinkActive">
+        <div class="d-inline-block align-middle mr-4">
+          <i class="material-icons md-24 {{ rla.isActive ? sideNavItem.iconColor : '' }}">{{ sideNavItem.icon }}</i>
+        </div>
+        <div class="d-inline-block align-middle">
+          <span class="{{ rla.isActive ? sideNavItem.iconColor : '' }}">
+            {{ sideNavItem.name }}
+          </span>
+        </div>
+      </a>
+   </mat-nav-list>
+</div>
