@@ -20,6 +20,9 @@ header {
     background-color: $primary;
     color: white;
     padding: 0.5rem 0;
+    h2 {
+        letter-spacing: 0.5rem;
+    }
 
     #hamburger-icon {
         font-size: 1.2rem;
