@@ -1,6 +1,15 @@
 // Global Styles Here!
+body {
+    font-size: 1rem;
+}
 section#body-content {
-    min-height: calc(100vh - 64px);
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    min-height: calc(100vh - 164px);
+    background-color: #fafafa;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
 }
 a:hover {
     color: unset;
@@ -26,4 +35,13 @@ a:focus, button:focus {
 }
 .orange {
     color: $m-orange;
+}
+.indigo {
+    color: $primary;
+}
+.yellow {
+    color: $m-yellow;
+}
+.mat-form-field {
+    font-size: 1rem;
 }

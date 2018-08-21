@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // document.querySelector('header').classList.remove('indigo', 'red', 'green', 'yellow');
+    // document.querySelector('header').classList.add('indigo');
   }
 
 }

@@ -15,10 +15,10 @@ export class AppService {
         new NavItem('Contact', 'contact', 'contact_mail', 'purple')
     ];
     // private navItems: NavItem[] = [
-    //     new NavItem('Nav Item 1', '/', 'home', 'green'),
-    //     new NavItem('Nav Item 2', 'about', 'info', 'orange'),
-    //     new NavItem('Nav Item 3', 'portfolio', 'folder', 'blue'),
-    //     new NavItem('Nav Item 4', 'contact', 'contact_mail', 'purple')
+    //     new NavItem('Nav Item 1', '/', 'home', 'indigo'),
+    //     new NavItem('Nav Item 2', 'about', 'info', 'green'),
+    //     new NavItem('Nav Item 3', 'portfolio', 'folder', 'red'),
+    //     new NavItem('Nav Item 4', 'contact', 'contact_mail', 'yellow')
     // ];
 
     getNavItems() {

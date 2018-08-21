@@ -4,7 +4,7 @@ $app-accent:  mat-palette($mat-pink);
 $app-warn:    mat-palette($mat-red);
 
 $primary: mat-color($app-primary);
-$accent: mat-color($app-accent);
+$accent: #ff4081;
 $warn: mat-color($app-warn);
 
 /*** Material colors ***/
@@ -22,3 +22,5 @@ $m-blue: mat-color($material-blue);
 $m-purple: mat-color($material-purple);
 $m-orange: mat-color($material-orange);
 $m-gray: mat-color($material-gray);
+$m-indigo: $primary;
+$m-yellow: #FBBC05;

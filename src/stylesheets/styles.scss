@@ -16,10 +16,19 @@
 mat-sidenav {
     width: 250px;
 }
+mat-form-field {
+    width: 100%;
+}
+.mat-button, .mat-raised-button {
+    font-size: 1rem;
+}
 header {
+    position: absolute;
+    width: 100%;
     background-color: $primary;
-    color: white;
+    color: white !important;
     padding: 0.5rem 0;
+    z-index: 100;
     h2 {
         letter-spacing: 0.05rem;
     }
@@ -27,12 +36,23 @@ header {
     #hamburger-icon {
         font-size: 1.2rem;
     }
-    .mat-button {
-        font-size: 1rem;
-    }
+}
+header.green {
+    background-color: $m-green;
+}
+header.indigo {
+    background-color: $m-indigo;
+}
+header.red {
+    background-color: $m-red;
+}
+header.yellow {
+    background-color: $m-yellow;
 }
 footer {
-    background-color: $accent;
+    background-color: #002984
+
+    ;
     color: white;
     padding: 1rem 0;
 }
