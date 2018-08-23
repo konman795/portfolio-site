@@ -1,9 +1,19 @@
+$pancake-size: 12rem;
 .project-pancake {
-    $pancake-size: 12rem;
-
     margin: 0 auto;
-    background-color: white;
     border-radius: 50%;
     width: $pancake-size;
     height: $pancake-size;
+    color: white;
+    font-size: 1rem;
+}
+.project-background {
+    position: absolute;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    width: $pancake-size;
+    height: $pancake-size;
+    border-radius: 50%;
+    filter: grayscale(100%) blur(3px);
 }
