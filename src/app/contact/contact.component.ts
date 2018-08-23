@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('f') form: NgForm;
 
-  constructor() { }
+  constructor(private emailService: EmailService, private http: HttpClient) { }
 
   ngOnInit() {
-    // document.querySelector('header').classList.remove('indigo', 'red', 'green', 'yellow');
-    // document.querySelector('header').classList.add('yellow');
-    // document.querySelector('#body-content').classList.add('yellow');
   }
 
-  onClearForm() {}
+  onClearForm() {
+    this.form.reset();
+  }
+
+  onSubmit() { }
 }

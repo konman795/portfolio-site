@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +12,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +25,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { AppService } from './app.service';
+import { EmailService } from './email.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,10 @@ import { AppService } from './app.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
@@ -45,9 +53,10 @@ import { AppService } from './app.service';
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule
   ],
-  providers: [AppService],
+  providers: [AppService, EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

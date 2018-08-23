@@ -14,13 +14,16 @@
 @import '../stylesheets/shame';
 
 mat-sidenav {
-    width: 250px;
+    width: 300px;
 }
 mat-form-field {
     width: 100%;
 }
 .mat-button, .mat-raised-button {
     font-size: 1rem;
+}
+.mat-step-header .mat-step-icon-not-touched {
+    background-color: $primary;
 }
 header {
     position: absolute;
