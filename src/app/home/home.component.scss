@@ -1,0 +1,29 @@
+#home-panel {
+    height: calc(100vh - 56px);
+    color: white;
+    span {
+        line-height: 1em;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+    span.subtext {
+        font-size: 2.6rem;
+    }
+    span.normal {
+        font-size: 2.6rem;
+        font-weight: 500;
+    }
+}
+@media (max-width: 575.98px) {
+    #home-panel {
+        span {
+            font-size: 1.8rem;
+        }
+        span.subtext {
+            font-size: 1.2rem;
+        }
+        span.normal {
+            font-size: 1.2rem;
+        }
+    }
+}

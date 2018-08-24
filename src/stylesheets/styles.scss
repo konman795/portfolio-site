@@ -57,3 +57,14 @@ footer {
     color: white;
     padding: 1rem 0;
 }
+.white-box-container {
+    position: absolute;
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+.white-box {
+    background-color: $primary;
+    height: calc(100vh - 56px);
+    width: 100%;
+    clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
+}

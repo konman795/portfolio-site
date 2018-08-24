@@ -27,7 +27,7 @@ import {
           opacity: 0,
           transform: 'translateY(150px)'
         }),
-        animate('0.9s cubic-bezier(0.55, 0.31, 0.15, 0.93)')
+        animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ]),
       state('normal', style({
         width: '12rem',
@@ -42,7 +42,7 @@ import {
       transition('normal <=> exploded', [
         group([
           query('@pancake-background', animateChild()),
-          animate('0.5s cubic-bezier(0.55, 0.31, 0.15, 0.93)')
+          animate('0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
         ])
       ])
     ]),
@@ -64,7 +64,7 @@ import {
         borderRadius: '20px',
         filter: 'grayscale(0%) blur(0px)'
       })),
-      transition('normal <=> exploded', animate('0.5s cubic-bezier(0.55, 0.31, 0.15, 0.93)'))
+      transition('normal <=> exploded', animate('0.5s cubic-bezier(0.4, 0.0, 0.2, 1)'))
     ])
   ]
 })

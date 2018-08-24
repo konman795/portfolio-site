@@ -1,48 +1,52 @@
 <div id="contact">
-  <div class="container">
-    <mat-card>
-      <mat-card-title>
-        <!-- <span>Let's chat</span> -->
-        <span>Contact Form</span>
-      </mat-card-title>
-      <mat-card-content>
-        <form (ngSubmit)="onSubmit()" #f="ngForm">
-          <div class="row">
-            <div class="col-md-6">
-              <mat-form-field appearance="fill">
-                <mat-label>Name</mat-label>
-                <input matInput type="text" id="name" name="name" ngModel required>
-                <i class="material-icons" matSuffix>perm_identity</i>
+  <div class="container h-100">
+    <div class="row align-items-center h-100">
+      <div class="col">
+        <mat-card>
+          <mat-card-title>
+            <!-- <span>Let's chat</span> -->
+            <span>Let's Chat!</span>
+          </mat-card-title>
+          <mat-card-content>
+            <form (ngSubmit)="onSubmit()" #f="ngForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" id="name" name="name" ngModel required>
+                    <i class="material-icons" matSuffix>perm_identity</i>
+                    <mat-error>
+                      Please enter your full name
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" id="email" name="email" email ngModel required>
+                    <i class="material-icons" matSuffix>email</i>
+                    <mat-error>
+                      Please enter a valid email
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <mat-form-field appearance="fill" class="mt-2">
+                <mat-label>Message</mat-label>
+                <textarea matInput type="text" id="message" name="message" rows="8" style="resize: none;" ngModel required></textarea>
+                <i class="material-icons" matSuffix>message</i>
                 <mat-error>
-                  Please enter your full name
+                  Please enter a message
                 </mat-error>
               </mat-form-field>
-            </div>
-            <div class="col-md-6">
-              <mat-form-field appearance="fill">
-                <mat-label>Email</mat-label>
-                <input matInput type="email" id="email" name="email" email ngModel required>
-                <i class="material-icons" matSuffix>email</i>
-                <mat-error>
-                  Please enter a valid email
-                </mat-error>
-              </mat-form-field>
-            </div>
-          </div>
-          <mat-form-field appearance="fill" class="mt-2">
-            <mat-label>Message</mat-label>
-            <textarea matInput type="text" id="message" name="message" rows="8" style="resize: none;" ngModel required></textarea>
-            <i class="material-icons" matSuffix>message</i>
-            <mat-error>
-              Please enter a message
-            </mat-error>
-          </mat-form-field>
-          <div class="text-right">
-            <button mat-button color="accent" type="button" class="mr-2" (click)="onClearForm()">Clear</button>
-            <button mat-raised-button color="accent" type="submit" [disabled]="f.invalid">Send it</button>
-          </div>
-        </form>
-      </mat-card-content>
-    </mat-card>
+              <div class="text-right">
+                <button mat-button color="accent" type="button" class="mr-2" (click)="onClearForm()">Clear</button>
+                <button mat-raised-button color="accent" type="submit" [disabled]="f.invalid">Send it</button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>

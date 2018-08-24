@@ -6,10 +6,10 @@ import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'portfolio', component: PortfolioComponent }
+    { path: '', component: HomeComponent, data: {state: 'home'} },
+    { path: 'about', component: AboutComponent, data: {state: 'about'} },
+    { path: 'contact', component: ContactComponent, data: {state: 'contact'} },
+    { path: 'portfolio', component: PortfolioComponent, data: {state: 'portfolio'} }
 ];
 
 @NgModule({
