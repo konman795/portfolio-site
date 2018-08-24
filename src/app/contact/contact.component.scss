@@ -9,4 +9,10 @@ mat-card-content {
 }
 #contact {
     height: calc(100vh - 220px);
+    padding: 2.25rem 0;
+}
+@media (max-width: 575.98px) {
+    #contact {
+        height: auto;
+    }
 }

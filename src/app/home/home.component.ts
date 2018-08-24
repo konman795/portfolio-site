@@ -25,7 +25,7 @@ import {
         style({
           'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
         }),
-        animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
+        animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
     ])
   ]
