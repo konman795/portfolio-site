@@ -5,12 +5,12 @@ import {
   style,
   transition,
   animate,
-  keyframes,
   group,
   query,
   stagger,
   animateChild
 } from '@angular/animations';
+import { Project } from '../models/project.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -20,12 +20,12 @@ import {
     trigger('pancake', [
       state(':enter', style({
         opacity: 1,
-        transform: 'translateY(0)'
+        transform: 'scale(1)'
       })),
       transition('void => *', [
         style({
           opacity: 0,
-          transform: 'translateY(150px)'
+          transform: 'scale(0)'
         }),
         animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ]),
@@ -48,7 +48,7 @@ import {
     ]),
     trigger('package-list', [
       transition(':enter', [
-        query('@pancake', stagger(150, animateChild()))
+        query('@pancake', stagger(100, animateChild()))
       ]),
     ]),
     trigger('pancake-background', [
@@ -71,16 +71,41 @@ import {
 
 
 export class PortfolioComponent implements OnInit {
-  state = 'normal';
+  projects: Project[] = [
+    new Project(
+      1,
+      'Louisiana Job Connection',
+      'https://louisianajobconnection.com/',
+      'ljc_home.jpg',
+      // tslint:disable-next-line:max-line-length
+      'Louisiana Job Connection\'s innovative matching system connects job seekers with Louisiana job opportunities that best fit their skills and experience.',
+      'normal'),
+    new Project(
+      2,
+      'University Laboratory School',
+      'https://www.uhigh.lsu.edu/',
+      'uhigh_home.jpg',
+      // tslint:disable-next-line:max-line-length
+      'The University Laboratory School community aspires towards total effort in every endeavor for maximum student achievement through the development, implementation, and demonstration of exemplary programs and instructional practices.',
+      'normal'),
+    new Project(
+      3,
+      'Southeast LA Flood Protection Authority',
+      'https://permits.floodauthority.org/',
+      'levee_permit_home.jpg',
+      // tslint:disable-next-line:max-line-length
+      'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
+      'normal')
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onPancakeClick(event) {
-    this.state === 'normal' ? this.state = 'exploded' : this.state = 'normal';
-    console.log(this.state);
+  onPancakeClick(index: number) {
+    console.log(index);
+    this.projects[index].state === 'normal' ? this.projects[index].state = 'exploded' : this.projects[index].state = 'normal';
   }
 
 }
