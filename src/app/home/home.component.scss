@@ -13,6 +13,19 @@
         font-size: 2.6rem;
         font-weight: 500;
     }
+    .mat-flat-button {
+        font-size: 1.5rem;
+        padding: 0.5em 1em;
+    }
+    .button-container {
+        margin-top: 1.5rem;
+    }
+    .white-border {
+        width: 50%;
+        height: 2px;
+        background-color: white;
+        margin: 2.5rem auto 0;
+    }
 }
 @media (max-width: 575.98px) {
     #home-panel {

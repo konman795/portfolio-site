@@ -8,7 +8,7 @@
             <span>Let's Chat!</span>
           </mat-card-title>
           <mat-card-content>
-            <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <form #f="ngForm" action="//formspree.io/konman795@gmail.com" method="POST">
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field appearance="fill">
@@ -23,7 +23,7 @@
                 <div class="col-md-6">
                   <mat-form-field appearance="fill">
                     <mat-label>Email</mat-label>
-                    <input matInput type="email" id="email" name="email" email ngModel required>
+                    <input matInput type="email" id="email" name="_replyto" email ngModel required>
                     <i class="material-icons" matSuffix>email</i>
                     <mat-error>
                       Please enter a valid email
@@ -43,6 +43,7 @@
                 <button mat-button color="accent" type="button" class="mr-2" (click)="onClearForm()">Clear</button>
                 <button mat-raised-button color="accent" type="submit" [disabled]="f.invalid">Send it</button>
               </div>
+              <input type="text" name="_gotcha" style="display:none" />
             </form>
           </mat-card-content>
         </mat-card>
