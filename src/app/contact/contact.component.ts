@@ -20,5 +20,10 @@ export class ContactComponent implements OnInit {
     this.form.reset();
   }
 
-  onSubmit() { }
+  onSubmit() {
+    const form = document.querySelector('form');
+    form.setAttribute('action', 'https://formspree.io/' + 'chao' + '.' + 'konkon' + '@' + 'gmail' + '.' + 'com');
+    form.setAttribute('method', 'POST');
+    form.submit();
+  }
 }

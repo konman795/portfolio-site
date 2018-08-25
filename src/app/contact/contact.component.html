@@ -8,7 +8,7 @@
             <span>Let's Chat!</span>
           </mat-card-title>
           <mat-card-content>
-            <form #f="ngForm" action="//formspree.io/konman795@gmail.com" method="POST">
+            <form #f="ngForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-md-6">
                   <mat-form-field appearance="fill">
