@@ -1,12 +1,21 @@
+@import '~@angular/material/theming';
+
 mat-card {
     padding: 0;
 }
+mat-card:hover {
+    transition: 0.4s;
+    @include mat-elevation(8);
+}
 mat-card-title {
-    padding: 30px 30px 24px;
-    font-size: 2rem;
+    padding: 24px 24px 0;
+    margin-bottom: 0;
+    h1 {
+        margin-bottom: 0;
+    }
 }
 mat-card-content {
-    padding: 0 24px 24px;
+    padding: 24px 24px;
 }
 #contact {
     height: calc(100vh - 220px);

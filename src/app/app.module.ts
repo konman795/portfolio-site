@@ -9,12 +9,10 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatStepperModule } from '@angular/material/stepper';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -50,13 +48,11 @@ import { EmailService } from './email.service';
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
-    MatTooltipModule,
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule,
-    MatStepperModule
+    MatInputModule
   ],
   providers: [AppService, EmailService],
   bootstrap: [AppComponent]

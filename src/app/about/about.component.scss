@@ -1,3 +1,57 @@
-.mat-stepper-horizontal, .mat-stepper-vertical {
-    background-color: transparent;
+@import '~@angular/material/theming';
+@import '../../stylesheets/variables';
+
+mat-card:hover {
+    transition: 0.4s;
+    @include mat-elevation(8);
+}
+#about-me {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+#bio-card {
+    p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.25em;
+    }
+}
+
+#bio-image {
+    $image-size: 12rem;
+    background-image: url('../../assets/images/bio_image.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: $image-size;
+    height: $image-size;
+    @include mat-elevation(2);
+}
+
+#skill-highlight {
+    margin-top: 2.5rem;
+}
+
+mat-card.round {
+    margin: 0 auto;
+    $round-card-size: 16rem;
+    text-align: center;
+    border-radius: 50%;
+    width: $round-card-size;
+    height: $round-card-size;
+    .icon {
+        font-size: 3.5rem;
+        color: $primary;
+    }
+    .title {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        line-height: 1.2em;
+    }
+    .description {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-top: 0.6rem;
+        padding: 0 0.5rem;
+    }
 }

@@ -10,8 +10,6 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // document.querySelector('header').classList.remove('indigo', 'red', 'green', 'yellow');
-    // document.querySelector('header').classList.add('green');
   }
 
 }
