@@ -27,7 +27,29 @@ import {
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
-    ])
+    ]),
+    trigger('white-divider', [
+      state(':enter', style({
+        'width': '50%'
+      })),
+      transition('void => *', [
+        style({
+          'width': '0%'
+        }),
+        animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ])
+    ]),
+    trigger('fadeIn', [
+      state(':enter', style({
+        'opacity': '1'
+      })),
+      transition('void => *', [
+        style({
+          'opacity': '0'
+        }),
+        animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ])
+    ]),
   ]
 })
 export class HomeComponent implements OnInit {

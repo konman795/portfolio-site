@@ -1,118 +1,71 @@
+<div id="blue-background-bar" [@blue-box]></div>
 <div id="about-me">
   <div class="container">
-    <mat-card id="bio-card">
+    <mat-card id="bio-card" [@bio-card]>
       <div class="row align-items-center">
         <div class="col-md-auto">
           <div id="bio-image"></div>
         </div>
         <div class="col-md">
-          <div>
-            <h1>Who Am I?</h1>
-          </div>
-          <div>
-            <p>
-              Made in Taiwan and raised in The Big Easy.
-            </p>
-            <p>
-              My impeccable attention to detail and unquenchable thirst for challenges has driven my success as a Front End Developer.
-              I'm on a neverending quest of working with teams to bring awesome UI/UX experiences to users worldwide.
-            </p>
-          </div>
-          <div>
-          </div>
+          <h1>Who Am I?</h1>
+          <p>
+            Made in Taiwan and raised in The&nbsp;Big&nbsp;Easy.
+          </p>
+          <p>
+            My impeccable attention to detail and unquenchable thirst for challenges has driven my success as a Front End Developer.
+            I'm on a neverending quest of working with teams to bring awesome UI/UX experiences to users worldwide.
+          </p>
         </div>
       </div>
     </mat-card>
   </div>
   <div id="skill-highlight">
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-auto">
-          <mat-card class="round">
+      <div class="row justify-content-center" [@skillpod-list]>
+        <div class="col-auto" *ngFor="let skillPod of skillPods">
+          <mat-card class="round" [@skillpod]>
             <div class="row align-items-center h-100">
               <div class="col">
                 <div class="icon">
-                  <i class="fas fa-desktop"></i>
+                  <i class="{{ skillPod.iconPath }}"></i>
                 </div>
                 <div class="title">
-                  <span>Responsive Rights</span>
+                  <span>{{ skillPod.name }}</span>
                 </div>
                 <div class="description">
-                  <span>Equal opportunity developer for devices of all shapes and sizes.</span>
+                  <span>{{ skillPod.description }}</span>
                 </div>
               </div>
             </div>
           </mat-card>
         </div>
-        <div class="col-auto">
-          <mat-card class="round">
-            <div class="row align-items-center h-100">
-              <div class="col">
-                <div class="icon">
-                  <i class="far fa-lightbulb"></i>
-                </div>
-                <div class="title">
-                  <span>Objectively Pleasant UI/UX</span>
-                </div>
-                <div class="description">
-                  <span>Experiences and decisions backed by facts, not emotion.</span>
-                </div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-auto">
-          <mat-card class="round">
-            <div class="row align-items-center h-100">
-              <div class="col">
-                <div class="icon">
-                  <i class="fas fa-eye"></i>
-                </div>
-                <div class="title">
-                  <span>Pixel Perfect</span>
-                </div>
-                <div class="description">
-                  <span>Bringing static mockups to life with unrivaled attention to detail.</span>
-                </div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div class="col-auto">
-          <mat-card class="round">
-            <div class="row align-items-center h-100">
-              <div class="col">
-                <div class="icon">
-                  <i class="fas fa-flag-checkered"></i>
-                </div>
-                <div class="title">
-                  <span>Cutting Edge</span>
-                </div>
-                <div class="description">
-                  <span>The latest and bleeding edge tech for every new project.</span>
-                </div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <!-- <div class="col-auto">
-          <mat-card class="round">
-            <div class="row align-items-center h-100">
-              <div class="col">
-                <div class="icon">
-                  <i class="fas fa-stopwatch"></i>
-                </div>
-                <div class="title">
-                  <span>Efficiency | Teamwork</span>
-                </div>
-                <div class="description">
-                  <span>Effective time management and meshing easily with teams.</span>
-                </div>
-              </div>
-            </div>
-          </mat-card>
-        </div> -->
       </div>
+    </div>
+  </div>
+  <div id="skillsets">
+    <div class="container">
+      <mat-card [@skillset-card]>
+        <h1>What Do I Know?</h1>
+        <p>Here are the languages and frameworks I gel with.</p>
+        <mat-chip-list>
+          <mat-chip selected *ngFor="let language of languageFrameworks">{{ language }}</mat-chip>
+        </mat-chip-list>
+        <div class="chip-list-divider"></div>
+        <p>The tools/tech that help me create outstanding products.</p>
+        <mat-chip-list>
+          <mat-chip selected *ngFor="let tool of tools">{{ tool }}</mat-chip>
+        </mat-chip-list>
+        <div class="chip-list-divider"></div>
+        <p>Pre-packaged CMS's I've worked with. Because sometimes they work better for the client.</p>
+        <mat-chip-list>
+          <mat-chip selected *ngFor="let cmsItem of cms">{{ cmsItem }}</mat-chip>
+        </mat-chip-list>
+        <div class="chip-list-divider"></div>
+        <p>General skillsets my peers have commended me for.</p>
+        <mat-chip-list>
+          <mat-chip selected *ngFor="let skill of skillsets">{{ skill }}</mat-chip>
+        </mat-chip-list>
+      </mat-card>
     </div>
   </div>
 </div>

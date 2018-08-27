@@ -1,6 +1,14 @@
 @import '~@angular/material/theming';
 @import '../../stylesheets/variables';
 
+#blue-background-bar {
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    width: 100%;
+    height: 23.2rem;
+    background-color: $primary;
+}
 mat-card:hover {
     transition: 0.4s;
     @include mat-elevation(8);
@@ -34,13 +42,13 @@ mat-card:hover {
 
 mat-card.round {
     margin: 0 auto;
-    $round-card-size: 16rem;
+    $round-card-size: 15rem;
     text-align: center;
     border-radius: 50%;
     width: $round-card-size;
     height: $round-card-size;
     .icon {
-        font-size: 3.5rem;
+        font-size: 3rem;
         color: $primary;
     }
     .title {
@@ -55,3 +63,50 @@ mat-card.round {
         padding: 0 0.5rem;
     }
 }
+
+#skillsets {
+    margin-top: 2.5rem;
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.25em;
+        margin-top: 1.5rem;
+    }
+    .mat-chip {
+        font-size: 1rem;
+        padding: 0.6em 1em 0.6em;
+        font-weight: 500;
+    }
+    .chip-list-divider {
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 1px;
+        background-color: lightgrey;
+    }
+}
+
+@media (max-width: 767px) {
+    #bio-card {
+        text-align: center;
+        min-height: 505px;
+    }
+    #bio-image {
+        margin: 0 auto 1rem;
+    }
+    #blue-background-bar {
+        top: 35rem;
+        height: 75.2rem;
+    }
+    mat-card.round {
+        margin: 0.5rem auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    mat-card.round {
+        margin: 0.5rem auto;
+    }
+    #blue-background-bar {
+        height: 41.2rem;
+    }
+ }

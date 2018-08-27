@@ -19,12 +19,10 @@ import { Project } from '../models/project.model';
   animations: [
     trigger('pancake', [
       state(':enter', style({
-        opacity: 1,
         transform: 'scale(1)'
       })),
       transition('void => *', [
         style({
-          opacity: 0,
           transform: 'scale(0)'
         }),
         animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
@@ -35,8 +33,8 @@ import { Project } from '../models/project.model';
         borderRadius: '50%'
       })),
       state('exploded', style({
-        width: '40rem',
-        height: '60rem',
+        width: '30vw',
+        height: '30vw',
         borderRadius: '20px'
       })),
       transition('normal <=> exploded', [
@@ -59,8 +57,8 @@ import { Project } from '../models/project.model';
         filter: 'grayscale(100%) blur(3px)'
       })),
       state('exploded', style({
-        width: '40rem',
-        height: '60rem',
+        width: '30vw',
+        height: '30vw',
         borderRadius: '20px',
         filter: 'grayscale(0%) blur(0px)'
       })),
