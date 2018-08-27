@@ -26,11 +26,22 @@ import {
       transition('void => *', [
         style({
           'opacity': '0',
-          'transform': 'translatey(25px)'
+          'transform': 'scale(1.3)'
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
-    ])
+    ]),
+    trigger('contact-card-background', [
+      state(':enter', style({
+        'clip-path': 'polygon(19% 28%, 85% 24%, 81% 82%, 14% 88%)'
+      })),
+      transition('void => *', [
+        style({
+          'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+        }),
+        animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ])
+    ]),
   ]
 })
 export class ContactComponent implements OnInit {

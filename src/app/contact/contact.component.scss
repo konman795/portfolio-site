@@ -17,6 +17,17 @@ mat-card-title {
 mat-card-content {
     padding: 24px 24px;
 }
+#blue-background {
+    background-color: $primary;
+    position: absolute;
+    height: calc(100vh - 128px);
+    width: 100%;
+    top: -36px;
+    clip-path: polygon(19% 28%, 85% 24%, 81% 82%, 14% 88%);
+}
+#card-background {
+    background-color: $primary;
+}
 #contact {
     height: calc(100vh - 220px);
     padding: 2.25rem 0;
