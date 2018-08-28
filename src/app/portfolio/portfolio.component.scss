@@ -1,23 +1,14 @@
 #portfolio {
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
-
-$pancake-size: 12rem;
-.project-pancake {
-    margin: 0 auto;
-    border-radius: 50%;
-    width: $pancake-size;
-    height: $pancake-size;
-    color: white;
-    font-size: 1rem;
+mat-card {
+  height: calc(50vh - 220px);
+  min-height: 17rem;
+  color: white;
+  padding: 3rem;
+  margin: 1rem 0;
 }
-.project-background {
-    position: absolute;
-    overflow: hidden;
-    background-position: center;
-    background-size: cover;
-    width: $pancake-size;
-    height: $pancake-size;
-    border-radius: 50%;
-    filter: grayscale(100%) blur(3px);
+.img-fluid {
+  
 }

@@ -25,15 +25,14 @@ import {
       })),
       transition('void => *', [
         style({
-          'opacity': '0',
-          'transform': 'scale(1.3)'
+          'opacity': '0'
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
     ]),
     trigger('contact-card-background', [
       state(':enter', style({
-        'clip-path': 'polygon(19% 28%, 85% 24%, 81% 82%, 14% 88%)'
+        'clip-path': 'polygon(19% 28%, 81% 28%, 81% 82%, 19% 82%)'
       })),
       transition('void => *', [
         style({

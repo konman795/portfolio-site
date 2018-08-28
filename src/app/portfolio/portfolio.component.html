@@ -1,15 +1,17 @@
 <div id="portfolio">
   <div class="container-fluid">
-    <div class="row justify-content-center" [@package-list]>
-      <div class="col-6 col-md-4 col-lg-auto" *ngFor="let project of projects; let i = index;">
-        <div class="project-pancake mat-elevation-z3" [@pancake]="project.state" (click)="onPancakeClick(i)">
-          <div class="project-background" [@pancake-background]="project.state" [ngStyle]="{'background-image': 'url(../assets/images/projects/' + project.imagePath + ')'}"></div>
-          <div class="row align-items-center justify-content-center h-100">
-            <div class="col-auto">
-              <span class="title">Title Here</span>
+    <div class="row" [@card-list]>
+      <div class="col-lg-4" *ngFor="let project of projects; let i = index;">
+        <mat-card [ngStyle]="{'background': project.cardBackgroundColor}" [@card]="project.state">
+          <!--<div class="background-logo" [ngStyle]="{'background-image': 'url(../assets/images/projects/logos/' + project.logoPath + ')'}"></div>-->
+          <div class="row align-items-center h-100">
+            <div class="col">
+              <div class="project-logo text-center">
+                <img class="img-fluid" src="../assets/images/projects/logos/{{ project.logoPath }}" />
+              </div>
             </div>
           </div>
-        </div>
+        </mat-card>
       </div>
     </div>
   </div>

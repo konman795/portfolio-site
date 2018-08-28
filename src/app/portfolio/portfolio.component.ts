@@ -17,25 +17,21 @@ import { Project } from '../models/project.model';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
   animations: [
-    trigger('pancake', [
+    trigger('card', [
       state(':enter', style({
-        transform: 'scale(1)'
+        transform: 'translatey(0)',
+        opacity: '1'
       })),
       transition('void => *', [
         style({
-          transform: 'scale(0)'
+          transform: 'translatey(100px)',
+          opacity: '0'
         }),
         animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ]),
       state('normal', style({
-        width: '12rem',
-        height: '12rem',
-        borderRadius: '50%'
       })),
       state('exploded', style({
-        width: '30vw',
-        height: '30vw',
-        borderRadius: '20px'
       })),
       transition('normal <=> exploded', [
         group([
@@ -44,9 +40,9 @@ import { Project } from '../models/project.model';
         ])
       ])
     ]),
-    trigger('package-list', [
+    trigger('card-list', [
       transition(':enter', [
-        query('@pancake', stagger(100, animateChild()))
+        query('@card', stagger(50, animateChild()))
       ]),
     ]),
     trigger('pancake-background', [
@@ -74,26 +70,56 @@ export class PortfolioComponent implements OnInit {
       1,
       'Louisiana Job Connection',
       'https://louisianajobconnection.com/',
-      'ljc_home.jpg',
+      'ljc_logo_dark.png',
       // tslint:disable-next-line:max-line-length
       'Louisiana Job Connection\'s innovative matching system connects job seekers with Louisiana job opportunities that best fit their skills and experience.',
-      'normal'),
+      'normal',
+      'rgba(255, 255, 255, 0.95)'),
     new Project(
       2,
       'University Laboratory School',
       'https://www.uhigh.lsu.edu/',
-      'uhigh_home.jpg',
+      'uhigh_logo.png',
       // tslint:disable-next-line:max-line-length
       'The University Laboratory School community aspires towards total effort in every endeavor for maximum student achievement through the development, implementation, and demonstration of exemplary programs and instructional practices.',
-      'normal'),
+      'normal',
+      'rgba(0, 0, 0, 0.95)'),
     new Project(
       3,
       'Southeast LA Flood Protection Authority',
       'https://permits.floodauthority.org/',
-      'levee_permit_home.jpg',
+      'levee_permit_logo.png',
       // tslint:disable-next-line:max-line-length
       'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
-      'normal')
+      'normal',
+      'linear-gradient(#009eba, #3c8842)'),
+    new Project(
+      4,
+      'Pulsario',
+      'https://portal.mypulsario.com/',
+      'pulsario_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Helping people with heart problems or something.',
+      'normal',
+      'linear-gradient(to right, #005677, #000033)'),
+    new Project(
+      5,
+      'Signal',
+      'https://permits.floodauthority.org/',
+      'signal_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Custom tracking solutions and eCommerce site',
+      'normal',
+      'rgba(223, 86, 64, 0.95)'),
+    new Project(
+      6,
+      'Texas Rebuilds',
+      'https://permits.floodauthority.org/',
+      'texas_rebuilds_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Hurricane Harvey recovery management system',
+      'normal',
+      'rgba(17, 99, 203, 0.95)')
   ];
 
   constructor() { }
