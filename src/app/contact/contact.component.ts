@@ -25,18 +25,23 @@ import {
       })),
       transition('void => *', [
         style({
-          'opacity': '0'
+          'opacity': '0',
+          'transform': 'scale(1.2)'
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
     ]),
     trigger('contact-card-background', [
       state(':enter', style({
-        'clip-path': 'polygon(19% 28%, 81% 28%, 81% 82%, 19% 82%)'
       })),
       transition('void => *', [
         style({
-          'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+          'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+          'width': '100%',
+          'height': '100%',
+          'left': '0',
+          'top': '0',
+          'opacity': '0'
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])

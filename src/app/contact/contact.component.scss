@@ -1,49 +1,56 @@
-@import '~@angular/material/theming';
-@import '../../stylesheets/variables';
+@import "~@angular/material/theming";
+@import "../../stylesheets/variables";
 
 mat-card {
-    padding: 0;
+  padding: 0;
 }
 mat-card:hover {
-    @include mat-elevation(8);
+  @include mat-elevation(8);
 }
 mat-card-title {
-    padding: 24px 24px 0;
+  padding: 24px 24px 0;
+  margin-bottom: 0;
+  h1 {
     margin-bottom: 0;
-    h1 {
-        margin-bottom: 0;
-    }
+  }
 }
 mat-card-content {
-    padding: 24px 24px;
+  padding: 24px 24px;
 }
 #blue-background {
   background-color: $primary;
   position: absolute;
-  height: calc(100vh - 128px);
-  width: 100%;
-  top: -36px;
-  clip-path: polygon(19% 28%, 81% 28%, 81% 82%, 19% 82%);
+  clip-path: polygon(3% 10%, 100% 5%, 97% 90%, 0% 95%);
+  $blue-background-height: 40rem;
+  height: $blue-background-height;
+  top: calc(50% - #{$blue-background-height}/ 2 - 54px);
+  $blue-background-width: 80rem;
+  width: $blue-background-width;
+  left: calc(50% - #{$blue-background-width}/ 2);
 }
 #card-background {
-    background-color: $primary;
+  background-color: $primary;
 }
 #contact {
-    height: calc(100vh - 220px);
-    padding: 2.25rem 0;
+  height: calc(100vh - 220px);
+  padding: 2.25rem 0;
 }
+
 @media (max-width: 575.98px) {
-    mat-card-title {
-        font-size: 1.4rem;
-        padding: 24px 24px 16px;
-    }
-    #contact {
-        height: auto;
-    }
-}
-#contact-blue-background {
-    position: absolute;
-    top: 56px;
-    width: 100%;
-    height: calc(100vh - 56px - 164px);
+  mat-card-title {
+    font-size: 1.4rem;
+    padding: 24px 24px 16px;
+  }
+  #contact {
+    height: auto;
+    padding: 3rem 0;
+  }
+  #blue-background {
+    $blue-background-height: 42rem;
+    height: $blue-background-height;
+    top: calc(50% - #{$blue-background-height}/ 2 - 54px);
+    $blue-background-width: 80rem;
+    width: $blue-background-width;
+    left: calc(50% - #{$blue-background-width}/ 2);
+  }
 }
