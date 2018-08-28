@@ -20,7 +20,7 @@ mat-card-content {
 #blue-background {
   background-color: $primary;
   position: absolute;
-  clip-path: polygon(3% 10%, 100% 5%, 97% 90%, 0% 95%);
+  clip-path: polygon(3% 10%, 97% 10%, 97% 90%, 3% 90%);
   $blue-background-height: 40rem;
   height: $blue-background-height;
   top: calc(50% - #{$blue-background-height}/ 2 - 54px);

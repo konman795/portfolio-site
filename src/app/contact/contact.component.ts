@@ -40,8 +40,7 @@ import {
           'width': '100%',
           'height': '100%',
           'left': '0',
-          'top': '0',
-          'opacity': '0'
+          'top': '0'
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])

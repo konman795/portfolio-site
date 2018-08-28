@@ -70,11 +70,11 @@ export class PortfolioComponent implements OnInit {
       1,
       'Louisiana Job Connection',
       'https://louisianajobconnection.com/',
-      'ljc_logo_dark.png',
+      'ljc_logo.png',
       // tslint:disable-next-line:max-line-length
       'Louisiana Job Connection\'s innovative matching system connects job seekers with Louisiana job opportunities that best fit their skills and experience.',
       'normal',
-      'rgba(255, 255, 255, 0.95)'),
+      'rgba(223, 158, 4, 0.95)'),
     new Project(
       2,
       'University Laboratory School',
@@ -83,7 +83,7 @@ export class PortfolioComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       'The University Laboratory School community aspires towards total effort in every endeavor for maximum student achievement through the development, implementation, and demonstration of exemplary programs and instructional practices.',
       'normal',
-      'rgba(0, 0, 0, 0.95)'),
+      'rgba(0, 0, 0, 0.90)'),
     new Project(
       3,
       'Southeast LA Flood Protection Authority',
@@ -92,7 +92,7 @@ export class PortfolioComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
       'normal',
-      'linear-gradient(#009eba, #3c8842)'),
+      'linear-gradient(rgba(0, 158, 186, 0.95), rgba(60, 136, 66, 0.95))'),
     new Project(
       4,
       'Pulsario',
@@ -101,7 +101,7 @@ export class PortfolioComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       'Helping people with heart problems or something.',
       'normal',
-      'linear-gradient(to right, #005677, #000033)'),
+      'linear-gradient(to right, rgba(0, 86, 119, 0.95), rgba(0, 0, 51, 0.95))'),
     new Project(
       5,
       'Signal',
