@@ -69,3 +69,13 @@ footer {
     width: 100%;
     clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
 }
+portfolio-dialog {
+  .blurred-image {
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    background-color: red;
+  }
+} 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import {
   trigger,
   state,
@@ -10,7 +10,13 @@ import {
   stagger,
   animateChild
 } from '@angular/animations';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Project } from '../models/project.model';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+
+export interface DialogData {
+  blurredImage: string;
+}
 
 @Component({
   selector: 'app-portfolio',
@@ -35,8 +41,8 @@ import { Project } from '../models/project.model';
       })),
       transition('normal <=> exploded', [
         group([
-          query('@pancake-background', animateChild()),
-          animate('0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
+          // query('@pancake-background', animateChild()),
+          animate('0.8s cubic-bezier(0.4, 0.0, 0.2, 1)')
         ])
       ])
     ]),
@@ -62,7 +68,6 @@ import { Project } from '../models/project.model';
     ])
   ]
 })
-
 
 export class PortfolioComponent implements OnInit {
   projects: Project[] = [
@@ -121,15 +126,43 @@ export class PortfolioComponent implements OnInit {
       'normal',
       'rgba(17, 99, 203, 0.95)')
   ];
+  public projectBannerPath: SafeStyle;
 
-  constructor() { }
+  constructor(public dialog: MatDialog, private sanitization: DomSanitizer) { }
 
   ngOnInit() {
   }
 
-  onPancakeClick(index: number) {
-    console.log(index);
-    this.projects[index].state === 'normal' ? this.projects[index].state = 'exploded' : this.projects[index].state = 'normal';
+  onClickProject(index: number): void {
+    //this.projects[index].state === 'normal' ? this.projects[index].state = 'exploded' : this.projects[index].state = 'normal';
+    //const previewElement = document.querySelector(`#project_${index} .preview`);
+    this.projectBannerPath = this.sanitization.bypassSecurityTrustStyle(`url('../assets/images/projects/logos/${this.projects[index].logoPath}')`);
+
+    const dialogRef = this.dialog.open(PortfolioDialog, {
+      backdropClass: 'portfolio-dialog',
+      data: { bannerPath: this.projectBannerPath }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+}
+
+@Component({
+  selector: 'portfolio-dialog',
+  templateUrl: 'portfolio-dialog.html',
+})
+
+export class PortfolioDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<PortfolioDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

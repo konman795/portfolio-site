@@ -1,14 +1,14 @@
 #portfolio {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  min-height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
 }
+
 mat-card {
   height: calc(50vh - 220px);
   min-height: 17rem;
   color: white;
   padding: 5vw;
   margin: 1rem 0;
-}
-.img-fluid {
-  
+  cursor: pointer;
 }

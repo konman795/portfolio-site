@@ -1,9 +1,8 @@
 <div id="portfolio">
-  <div class="container-fluid">
+  <div id="project-list" class="container-fluid">
     <div class="row" [@card-list]>
-      <div class="col-lg-4" *ngFor="let project of projects; let i = index;">
-        <mat-card [ngStyle]="{'background': project.cardBackgroundColor}" [@card]="project.state">
-          <!--<div class="background-logo" [ngStyle]="{'background-image': 'url(../assets/images/projects/logos/' + project.logoPath + ')'}"></div>-->
+      <div class="col-md-6 col-lg-4" *ngFor="let project of projects; let i = index;">
+        <mat-card [ngStyle]="{'background': project.cardBackgroundColor}" [@card]="project.state" (click)="onClickProject(i)">
           <div class="row align-items-center h-100">
             <div class="col">
               <div class="project-logo text-center">
