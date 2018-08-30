@@ -1,7 +1,37 @@
-<div class="blurred-image" [style.background-image]="data.bannerPath"></div>
-<h2 mat-dialog-title>Install Angular</h2>
 <mat-dialog-content>
-  <h2>Develop across all platforms</h2>
+  <!-- <div class="blurred-image" [style.background-image]="data.bannerPath"></div> -->
+  <h2 mat-dialog-title>{{ data.name }}</h2>
+  <div class="row">
+    <div class="col-md-9">
+      <div class="problem">
+        <h3>Problem:</h3>
+        <p>{{ data.problem }}</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <p>{{ data.solution }}</p>
+      </div>
+      <div class="contribution">
+        <h3>Here's what my role was:</h3>
+        <p>{{ data.contribution }}</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="technologies">
+        <ul>
+          <li *ngFor="let item of data.technologies">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="project-screenshots">
+    <mat-card *ngFor="let screenshot of data.screenshots">
+      <img class="img-fluid" src="../../assets/images/projects/screenshots/{{ screenshot }}">
+    </mat-card>
+  </div>
+
 </mat-dialog-content>
 <!--<mat-dialog-actions align="">
   <button mat-button mat-dialog-close>Cancel</button>

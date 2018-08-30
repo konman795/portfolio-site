@@ -69,13 +69,19 @@ footer {
     width: 100%;
     clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
 }
-portfolio-dialog {
+app-portfolio-dialog {
+    .mat-card {
+        margin: 1rem 0;
+    }
+    .mat-dialog-content {
+        max-height: 85vh;
+    }
   .blurred-image {
-    height: 30rem;
-    background-size: cover;
-    background-position: center;
+    height: 15rem;
+    width: 100%;
+    background-size: auto;
+    background-position: top left;
     background-repeat: no-repeat;
-    filter: blur(3px);
-    background-color: red;
+    filter: blur(5px);
   }
 } 

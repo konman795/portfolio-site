@@ -23,7 +23,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PortfolioComponent, PortfolioDialog } from './portfolio/portfolio.component';
+import { PortfolioComponent, PortfolioDialogComponent } from './portfolio/portfolio.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { AppService } from './app.service';
@@ -39,7 +39,7 @@ import { EmailService } from './email.service';
     FooterComponent,
     PortfolioComponent,
     SidenavComponent,
-    PortfolioDialog
+    PortfolioDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +59,7 @@ import { EmailService } from './email.service';
     MatChipsModule,
     MatDialogModule
   ],
-  entryComponents: [PortfolioComponent, PortfolioDialog],
+  entryComponents: [PortfolioComponent, PortfolioDialogComponent],
   providers: [AppService, EmailService],
   bootstrap: [AppComponent]
 })
