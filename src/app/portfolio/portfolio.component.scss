@@ -1,3 +1,5 @@
+@import '~@angular/material/theming';
+
 #portfolio {
   min-height: calc(100vh - 220px);
   display: flex;
@@ -11,4 +13,8 @@ mat-card {
   padding: 5vw;
   margin: 1rem 0;
   cursor: pointer;
+}
+mat-card:hover {
+  transition: 0.4s;
+  @include mat-elevation(8);
 }

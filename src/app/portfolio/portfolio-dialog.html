@@ -1,39 +1,53 @@
 <mat-dialog-content>
   <!-- <div class="blurred-image" [style.background-image]="data.bannerPath"></div> -->
-  <h2 mat-dialog-title>{{ data.name }}</h2>
-  <div class="row">
-    <div class="col-md-9">
-      <div class="problem">
-        <h3>Problem:</h3>
-        <p>{{ data.problem }}</p>
+  <div class="container-fluid header" [style.background]="data.headerBackgroundColor">
+    <div class="row align-items-center">
+      <div class="col">
+        <h2 class="mb-0" mat-dialog-title>{{ data.name }}</h2>
       </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <p>{{ data.solution }}</p>
-      </div>
-      <div class="contribution">
-        <h3>Here's what my role was:</h3>
-        <p>{{ data.contribution }}</p>
+      <div class="col-auto">
+        <button class="close-btn" mat-flat-button mat-dialog-close>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="technologies">
-        <ul>
-          <li *ngFor="let item of data.technologies">
-            {{ item }}
-          </li>
-        </ul>
+  </div>
+  <div class="container-fluid body-content">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="problem">
+          <h3>The Problem.</h3>
+          <p>{{ data.problem }}</p>
+        </div>
+        <div class="divider mb-3"></div>
+        <div class="solution">
+          <h3>Answer.</h3>
+          <p>{{ data.solution }}</p>
+        </div>
+        <div class="divider mb-3"></div>
+        <div class="contribution">
+          <h3>What Was My Role?</h3>
+          <p>{{ data.contribution }}</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="technologies">
+          <h3>Technologies Used.</h3>
+          <ul>
+            <li *ngFor="let item of data.technologies">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
   <div class="project-screenshots">
     <mat-card *ngFor="let screenshot of data.screenshots">
       <img class="img-fluid" src="../../assets/images/projects/screenshots/{{ screenshot }}">
+      <div class="img-caption">
+        <span>This is a test image caption</span>
+      </div>
     </mat-card>
   </div>
-
 </mat-dialog-content>
-<!--<mat-dialog-actions align="">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions>-->

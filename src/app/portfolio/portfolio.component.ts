@@ -14,7 +14,15 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Project } from '../models/project.model';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
-export interface DialogData {}
+export interface DialogData {
+  name: string;
+  problem: string;
+  solution: string;
+  contribution: string;
+  technologies: string[];
+  screenshots: string[];
+  headerBackgroundColor: SafeStyle;
+}
 
 @Component({
   selector: 'app-portfolio',
@@ -113,7 +121,7 @@ export class PortfolioComponent implements OnInit {
       [],
       [],
       'normal',
-      'linear-gradient(rgba(0, 158, 186, 0.95), rgba(60, 136, 66, 0.95))'),
+      'linear-gradient(to right, rgba(0, 158, 186, 0.95), rgba(60, 136, 66, 0.95))'),
     new Project(
       4,
       'Pulsario',
@@ -159,6 +167,7 @@ export class PortfolioComponent implements OnInit {
       'rgba(17, 99, 203, 0.95)')
   ];
   public projectBannerPath: SafeStyle;
+  public projectHeaderBackgroundColor: SafeStyle;
   projectName: string;
   projectProblem: string;
   projectSolution: string;
@@ -177,6 +186,7 @@ export class PortfolioComponent implements OnInit {
 
     // tslint:disable-next-line:max-line-length
     this.projectBannerPath = this.sanitization.bypassSecurityTrustStyle(`url('../assets/images/projects/screenshots/${this.projects[index].screenshotPaths[0]}')`);
+    this.projectHeaderBackgroundColor = this.sanitization.bypassSecurityTrustStyle(`${this.projects[index].cardBackgroundColor}`);
     this.projectName = this.projects[index].name;
     this.projectProblem = this.projects[index].name;
     this.projectSolution = this.projects[index].solution;
@@ -185,15 +195,15 @@ export class PortfolioComponent implements OnInit {
     this.projectScreenshots = this.projects[index].screenshotPaths;
 
     const dialogRef = this.dialog.open(PortfolioDialogComponent, {
-      backdropClass: 'app-portfolio-dialog',
       data: {
         bannerPath: this.projectBannerPath,
+        headerBackgroundColor: this.projectHeaderBackgroundColor,
         name: this.projectName,
         problem: this.projectProblem,
         solution: this.projectSolution,
         contribution: this.projectContribution,
         technologies: this.projectTechnologies,
-        screenshots: this.projectScreenshots
+        screenshots: this.projectScreenshots,
       },
       width: '80vw'
     });
