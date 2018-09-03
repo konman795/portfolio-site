@@ -5,21 +5,15 @@ import { NavItem } from './models/navItem.model';
 export class AppService {
     appSidenav: MatSidenav;
     private linkedInURL = 'https://www.linkedin.com/in/kon-kon-c-19336875/';
-    private fbURL = '';
-    private twitterURL = '';
-    private instagramURL = '';
+    private fbURL = 'https://www.facebook.com/konkon.chao';
+    private twitterURL = 'https://twitter.com/konman795';
+    private instagramURL = 'https://www.instagram.com/konkon_chao/';
     private navItems: NavItem[] = [
         new NavItem('Home', '/', 'home', 'green'),
         new NavItem('About Me', 'about', 'info', 'orange'),
         new NavItem('Portfolio', 'portfolio', 'folder', 'blue'),
         new NavItem('Contact', 'contact', 'contact_mail', 'purple')
     ];
-    // private navItems: NavItem[] = [
-    //     new NavItem('Nav Item 1', '/', 'home', 'indigo'),
-    //     new NavItem('Nav Item 2', 'about', 'info', 'green'),
-    //     new NavItem('Nav Item 3', 'portfolio', 'folder', 'red'),
-    //     new NavItem('Nav Item 4', 'contact', 'contact_mail', 'yellow')
-    // ];
 
     getNavItems() {
         return this.navItems.slice();
@@ -35,5 +29,14 @@ export class AppService {
 
     getLinkedInURL() {
         return this.linkedInURL;
+    }
+    getfbURL() {
+        return this.fbURL;
+    }
+    getTwitterURL() {
+        return this.twitterURL;
+    }
+    getInstagramURL() {
+        return this.instagramURL;
     }
 }

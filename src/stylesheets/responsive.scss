@@ -1,5 +1,53 @@
 @media (max-width: 767px) {
+    .cdk-overlay-pane {
+        max-width: none !important;
+        width: 90vw !important;
+    }
     .mat-dialog-container { 
         box-shadow: none !important;
+    }
+    app-portfolio-dialog {
+        .header {
+            width: 90vw;
+            padding: 0.5rem 1rem;
+            .mat-dialog-title {
+                font-size: 1.25rem;
+                padding: 0rem;
+            }
+            .visit-site-link {
+                font-size: 1.1rem;
+                line-height: 0;
+            }
+            .close-btn {
+                font-size: 1.1rem;
+                padding: 0;
+                line-height: 1.9rem;
+            }
+            .visit-site-mobile {
+                color: white;
+                text-decoration: underline;
+                letter-spacing: 0.025em;
+                font-size: 0.85rem;
+            }
+        }
+        .body-content {
+            padding: 1.5rem 1rem;
+            h3 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            ul {
+                font-size: 1rem;
+            }
+        }
+        .mat-card {
+            margin: 0 1rem 1.5rem;
+        }
+        .img-caption {
+            font-size: 0.8rem;
+            line-height: 1.2em;
+        }
     }
 }

@@ -87,9 +87,9 @@ export class PortfolioComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       'Louisiana Economic Development approached our team needing a solution to help Louisiana residents and businesses with filling jobs. Along with filling jobs, they wanted to give businesses incentives to come to Louisiana.',
       // tslint:disable-next-line:max-line-length
-      'Our team designed and built a full featured job matching system to intelligently match Jobseeker and Employees based on their resumes and Employer\'s criteria. Individual landing pages were built for each region and industry in Louisiana. Employers were also given the ability to create custom landing pages with their own URL. Last but not least, a dedicated admin portal was created to manage logins, view analytics, generate reports and impersonate accounts',
+      'Our team designed and built a full featured job matching system to intelligently match Jobseeker and Employees based on their resumes and Employer\'s criteria. Individual landing pages were built for each region and industry in Louisiana. Employers were also given the ability to create custom landing pages with their own URL. Last but not least, a dedicated admin portal was created to manage logins, view analytics, generate reports and impersonate accounts. In the end we delivered a great product that genuinely wowed our client.',
       // tslint:disable-next-line:max-line-length
-      'I worked with Louisiana Economic Development\s designers throughout the mockup process to ensure the UI/UX being designed stayed simple, efficient and easy to navigate. Additionally, I set up and brought all the static mockups to life for the entire application. The responsive device development/optimizations were solely my responsibibily as well. These tasks were completed in parrallel with the back-end development because of the tight timeline. In the end we delivered a great product that wowed our client.',
+      'I worked with Louisiana Economic Development\s designers throughout the mockup process to ensure the UI/UX being designed stayed simple, efficient and easy to navigate. Additionally, I set up and brought all the static mockups to life for the entire application. The responsive device development/optimizations were solely my responsibility as well. These tasks were completed in parallel with the back-end development because of the tight timeline. One of my favorite challenges for this project was the development of the custom employer landing pages. Thinking of the best ways to hook into their content and options from the back end into the front end was an incredibly fun problem to solve.',
       ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 4', 'ASP.NET MVC', 'Razor C#', 'MySQL'],
       [
         // tslint:disable-next-line:max-line-length
@@ -106,10 +106,12 @@ export class PortfolioComponent implements OnInit {
       '',
       'texas_rebuilds_logo.png',
       // tslint:disable-next-line:max-line-length
-      'Hurricane Harvey recovery management system',
-      'FEMA needed a system built to manage the housing recovery efforts. For each role.',
-      'Built all front end UI/UX related items',
-      ['Bootstrap 4'],
+      'In 2017, Hurricane Harvey devastated many parts of Texas racking up $125 billion in damage and destroying at least 100,000 homes. FEMA needed a hurricane recovery management system to streamline the housing claims and recovery process. This all needed to be done yesterday.',
+      // tslint:disable-next-line:max-line-length
+      'Our team designed and developed a desktop web app for 8+ different roles along with an Android app for their field agents to use. Along with unique capabilties granted for each role, we gave superadmin roles the ability to impersonate any person, company and role in the system. We worked 14+ hour days for 3+ months with the client every day confirming and tweaking requirements. Each release took around 7-14 days which involved releasing a fully completed feature set for a role. This allowed FEMA\'s agents to start using the application as soon as possible while we continued work on other parts of the application. The extremely agile nature of this project brought out the best in all of us and solidified the fact that our team could handle any challenge. In the end, we delivered a product that exceeded our client\'s expectations.',
+      // tslint:disable-next-line:max-line-length
+      'I set up and translated all the static mockups we initially received into a workable shell for the back end developers to integrate into. Since this project was extremely agile, I paid special attention to making items as modular/reusable as possible within the given time constraints. Working closely with the project managers was crucial, I knew exactly what parts to focus my efforts on at any given time. After the first phase was completed, our designers were out of commission due to unforseen problems. I was responsible for coming up with a plan and improvising with what we had. I took our first phase mockups and generated/tweaked the UI/UX for the rest of the application as we progressed into each new phase. I am honored to have played a part in helping people get back into their homes faster.',
+      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 4', 'ASP.NET MVC', 'Razor C#', 'T-SQL'],
       [
         new ScreenShot('texas_rebuilds_login.jpg', 'Texas Rebuilds hurricane management recovery system login portal.'),
         new ScreenShot('texas_rebuilds_superadmin_dash.jpg', 'Superadmin dashboard view after logging in.'),
@@ -124,10 +126,12 @@ export class PortfolioComponent implements OnInit {
       'https://permits.floodauthority.org/',
       'levee_permit_logo.png',
       // tslint:disable-next-line:max-line-length
-      'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
-      'Levee permit applications needed to be streamlined',
-      'my contribution to levee permit project',
-      ['HTML5', 'Bootstrap 4'],
+      'Southeast Louisiana Flood Protection Authority - East (SLFPA-E) needed to overhaul their old school levee permit application process. They needed a faster and more efficient way for applicants to submit and track permit applications electronically.',
+      // tslint:disable-next-line:max-line-length
+      'Our team started by working with SLFPA-E to fully understand the permit application process so we could develop requirements to meet all their needs. As an applicant, the process begins with a location check to let them know immediately if they need to apply for a permit. If they do, the application process is broken up into simple steps guided by a progress bar. After submission, an internal reviewer and/or 3rd party reviewers work with the applicant to get their application approved. Finally, there is an admin role who is able to oversee everything in the system. The client loved everything about the application, from the UI/UX to the functionality and control they had over the system.',
+      // tslint:disable-next-line:max-line-length
+      'I worked with the designers and project managers throughout the design process to confirm the UI/UX decisions being made would work with the requirements. We were able to condense the original designs quite a bit and ended up with a more pleasant and space efficient experience. I was also responsible for setting up the front end structure and taking all the static mockups and turning them into code. One of the fun challenges of this project was implementing a Google Map background of the permit location into the applications list view. I got to learn a lot about the Google Maps API and got my first taste of Bootstrap 4\'s stable release.',
+      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 4', 'ASP.NET MVC', 'Razor C#', 'T-SQL', 'Google Maps API'],
       [
         new ScreenShot('levee_permit_home.jpg', 'SLFPA login portal.'),
         new ScreenShot('levee_permit_dashboard.jpg', 'Admin applications overview after logging in.'),
@@ -146,9 +150,11 @@ export class PortfolioComponent implements OnInit {
       // tslint:disable-next-line:max-line-length
       'Create a completely customizable tracking platform, ecommerce and native mobile app companion for the client to redistribute as their own service.',
       'all the front end stuff',
-      ['Bootstrap 4'],
+      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 3', 'ASP.NET MVC', 'Razor C#', 'T-SQL', 'Google Maps API'],
       [
-        new ScreenShot('signal_login.jpg', 'Signal login portal.')
+        new ScreenShot('signal_login.jpg', 'Signal login portal.'),
+        new ScreenShot('signal_add_brand.jpg', 'Signal Monitor\'s live tracking map view after logging in.'),
+        new ScreenShot('signal_monitor_view.jpg', 'Starting point of adding a new brand to the system.')
       ],
       'normal',
       'rgba(223, 86, 64, 0.95)',
@@ -231,9 +237,7 @@ export class PortfolioComponent implements OnInit {
       width: '80vw'
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    dialogRef.afterClosed().subscribe(result => { });
   }
 
 }

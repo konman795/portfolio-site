@@ -1,16 +1,19 @@
 <mat-dialog-content>
   <div class="container-fluid header" [style.background]="data.headerBackgroundColor">
-    <div class="row align-items-center">
-      <div class="col">
+    <div class="row align-items-md-center">
+      <div class="col col-md-auto pr-0">
         <h2 class="mb-0" mat-dialog-title>{{ data.name }}</h2>
-        <a *ngIf="data.url" matTooltip="Visit the site." class="visit-site-link" [href]="data.url" target="_blank"><i class="fas fa-external-link-alt"></i></a>
       </div>
-      <div class="col-auto">
+      <div class="col col-md-auto pl-3 pl-md-0 d-none d-md-flex" *ngIf="data.url">
+        <a matTooltip="Visit the site." class="visit-site-link" [href]="data.url" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <div class="col-auto col-md text-right">
         <button class="close-btn" mat-flat-button mat-dialog-close>
           <i class="fas fa-times"></i>
         </button>
       </div>
     </div>
+    <a *ngIf="data.url" [href]="data.url" target="_blank" class="visit-site-mobile d-inline d-md-none">Visit&nbsp;Site</a>
   </div>
   <div class="container-fluid body-content">
     <div class="row">
