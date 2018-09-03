@@ -78,11 +78,8 @@ app-portfolio-dialog {
     margin: 0rem calc(1.5rem + 16px) 3rem;
     padding: 0;
   }
-  .mat-card:hover {
-    transition: 0.4s;
-    @include mat-elevation(8);
-  }
   .mat-dialog-content {
+    background-color: #fafafa;
     max-height: 85vh;
     padding: 0;
     margin: 0;
@@ -96,13 +93,24 @@ app-portfolio-dialog {
     filter: blur(5px);
   }
   .header {
-    background-color: $primary;
     color: white;
+    position: fixed;
+    width: 80vw;
+    z-index: 100;
+    @include mat-elevation(6);
 
     .mat-dialog-title {
       font-size: 2rem;
       font-weight: 500;
-      padding: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .visit-site-link {
+      font-size: 1.3rem;
+      display: inline-block;
+      color: white;
+      vertical-align: middle;
     }
 
     .close-btn {
@@ -115,6 +123,8 @@ app-portfolio-dialog {
   }
   .body-content {
     padding: 1.5rem calc(1.5rem + 16px);
+    margin-top: 80px;
+    
     h3 {
       font-size: 1.3rem;
     }
@@ -139,10 +149,12 @@ app-portfolio-dialog {
     margin: 0.35em 0;
   }
   .img-caption {
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
+    padding: 0.5em 0;
+    font-size: 0.9rem;
     letter-spacing: 0.01em;
-    font-weight: 300;
     border-top: 1px solid #e6e6e6;
+    text-align: center;
+    font-weight: 500;
+    color: white;
   }
 }

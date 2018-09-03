@@ -13,6 +13,7 @@ import {
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Project } from '../models/project.model';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
+import { ScreenShot } from '../models/screenshot.model';
 
 export interface DialogData {
   name: string;
@@ -20,8 +21,9 @@ export interface DialogData {
   solution: string;
   contribution: string;
   technologies: string[];
-  screenshots: string[];
+  screenshots: ScreenShot[];
   headerBackgroundColor: SafeStyle;
+  url: string;
 }
 
 @Component({
@@ -83,16 +85,92 @@ export class PortfolioComponent implements OnInit {
       'https://louisianajobconnection.com/',
       'ljc_logo.png',
       // tslint:disable-next-line:max-line-length
-      'Louisiana Job Connection\'s innovative matching system connects job seekers with Louisiana job opportunities that best fit their skills and experience.',
+      'Louisiana Economic Development approached our team needing a solution to help Louisiana residents and businesses with filling jobs. Along with filling jobs, they wanted to give businesses incentives to come to Louisiana.',
       // tslint:disable-next-line:max-line-length
-      'Built a full featured system to allow custom company landing pages, communication system, job matching algorithms, jobseeker and employer portals',
+      'Our team designed and built a full featured job matching system to intelligently match Jobseeker and Employees based on their resumes and Employer\'s criteria. Individual landing pages were built for each region and industry in Louisiana. Employers were also given the ability to create custom landing pages with their own URL. Last but not least, a dedicated admin portal was created to manage logins, view analytics, generate reports and impersonate accounts',
       // tslint:disable-next-line:max-line-length
-      'Meet with designers and project managers through each mockup revision. Converted static mockups to live site for entire application. Email templates. Responsive',
-      ['HTML5', 'CSS3', 'JavaScript ES5', 'jQuery', 'Bootstrap 4', 'ASP.NET MVC', 'Razor C#'],
-      [],
-      ['ljc_home.png', 'ljc_jobseeker_dashboard.png', 'ljc_employer_dashboard.png'],
+      'I worked with Louisiana Economic Development\s designers throughout the mockup process to ensure the UI/UX being designed stayed simple, efficient and easy to navigate. Additionally, I set up and brought all the static mockups to life for the entire application. The responsive device development/optimizations were solely my responsibibily as well. These tasks were completed in parrallel with the back-end development because of the tight timeline. In the end we delivered a great product that wowed our client.',
+      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 4', 'ASP.NET MVC', 'Razor C#', 'MySQL'],
+      [
+        // tslint:disable-next-line:max-line-length
+        new ScreenShot('ljc_home.jpg', 'Louisiana Job Connection\'s landing page. Developed to span across the entire viewport and scale with all the most popular screen sizes.'),
+        new ScreenShot('ljc_jobseeker_dashboard.jpg', 'Jobseeker\'s dashboard view after logging in.'),
+        new ScreenShot('ljc_employer_dashboard.jpg', 'Employer\'s dashboard view after logging in.')
+      ],
       'normal',
-      'rgba(223, 158, 4, 0.95)'),
+      'rgba(223, 158, 4, 0.95)',
+      'rgb(223, 158, 4)'),
+    new Project(
+      6,
+      'Texas Rebuilds',
+      '',
+      'texas_rebuilds_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Hurricane Harvey recovery management system',
+      'FEMA needed a system built to manage the housing recovery efforts. For each role.',
+      'Built all front end UI/UX related items',
+      ['Bootstrap 4'],
+      [
+        new ScreenShot('texas_rebuilds_login.jpg', 'Texas Rebuilds hurricane management recovery system login portal.'),
+        new ScreenShot('texas_rebuilds_superadmin_dash.jpg', 'Superadmin dashboard view after logging in.'),
+        new ScreenShot('texas_rebuilds_detail.jpg', 'Client detail view showing their current housing recovery status.')
+      ],
+      'normal',
+      'rgba(17, 99, 203, 0.95)',
+      'rgb(17, 99, 203)'),
+    new Project(
+      3,
+      'Southeast LA Flood Protection Authority',
+      'https://permits.floodauthority.org/',
+      'levee_permit_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
+      'Levee permit applications needed to be streamlined',
+      'my contribution to levee permit project',
+      ['HTML5', 'Bootstrap 4'],
+      [
+        new ScreenShot('levee_permit_home.jpg', 'SLFPA login portal.'),
+        new ScreenShot('levee_permit_dashboard.jpg', 'Admin applications overview after logging in.'),
+        new ScreenShot('levee_permit_application_detail.jpg', 'Application detail view showing current progress.')
+      ],
+      'normal',
+      'linear-gradient(to right, rgba(0, 158, 186, 0.95), rgba(60, 136, 66, 0.95))',
+      'linear-gradient(to right, rgb(0, 158, 186), rgb(60, 136, 66))'),
+    new Project(
+      5,
+      'Signal',
+      '',
+      'signal_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Custom tracking solutions and eCommerce site',
+      // tslint:disable-next-line:max-line-length
+      'Create a completely customizable tracking platform, ecommerce and native mobile app companion for the client to redistribute as their own service.',
+      'all the front end stuff',
+      ['Bootstrap 4'],
+      [
+        new ScreenShot('signal_login.jpg', 'Signal login portal.')
+      ],
+      'normal',
+      'rgba(223, 86, 64, 0.95)',
+      'rgb(223, 86, 64)'),
+    new Project(
+      4,
+      'Pulsario',
+      'https://portal.mypulsario.com/',
+      'pulsario_logo.png',
+      // tslint:disable-next-line:max-line-length
+      'Helping people with heart problems or something.',
+      'Heart risk management with doctor and patient via a web portal',
+      'all the front end stuff, and rebranding',
+      ['HTML5', 'Bootstrap 3'],
+      [
+        new ScreenShot('pulsario_login.jpg', 'Pulsario login portal.'),
+        new ScreenShot('pulsario_dashboard.jpg', 'Provider dashboard view after logging in.'),
+        new ScreenShot('pulsario_main_tasks.jpg', 'Primary application tasks view with side navigation.')
+      ],
+      'normal',
+      'linear-gradient(to right, rgba(0, 86, 119, 0.95), rgba(0, 0, 51, 0.95))',
+      'linear-gradient(to right, rgb(0, 86, 119), rgb(0, 0, 51))'),
     new Project(
       2,
       'University Laboratory School',
@@ -104,76 +182,23 @@ export class PortfolioComponent implements OnInit {
       'After obtaining requirements, we decided to integrate with the DNN (Dot Net Nuke) CMS. DNN was a perfect match being a beautiful prepackaged CMS UI/UX already and easy integration with our framework. Provided a form request system, calendar and page creation with custom modules.',
       'my contribution to this project:',
       ['HTML5', 'CSS3', 'SASS'],
-      [],
-      [],
+      [
+        new ScreenShot('uhigh_home_2.jpg', 'University Laboratory School homepage.'),
+        new ScreenShot('uhigh_interior_page_2.jpg', 'ULS interior page view.'),
+        new ScreenShot('uhigh_page_edit.jpg', 'ULS admin page edit view.')
+      ],
       'normal',
-      'rgba(0, 0, 0, 0.90)'),
-    new Project(
-      3,
-      'Southeast LA Flood Protection Authority',
-      'https://permits.floodauthority.org/',
-      'levee_permit_logo.png',
-      // tslint:disable-next-line:max-line-length
-      'Web-based Levee Safety Permitting System for Southeast Louisiana Flood Protection Authority - East.',
-      'Levee permit applications needed to be streamlined',
-      'my contribution to levee permit project',
-      ['HTML5', 'Bootstrap 4'],
-      [],
-      [],
-      'normal',
-      'linear-gradient(to right, rgba(0, 158, 186, 0.95), rgba(60, 136, 66, 0.95))'),
-    new Project(
-      4,
-      'Pulsario',
-      'https://portal.mypulsario.com/',
-      'pulsario_logo.png',
-      // tslint:disable-next-line:max-line-length
-      'Helping people with heart problems or something.',
-      'Heart risk management with doctor and patient via a web portal',
-      'all the front end stuff, and rebranding',
-      ['HTML5', 'Bootstrap 3'],
-      [],
-      [],
-      'normal',
-      'linear-gradient(to right, rgba(0, 86, 119, 0.95), rgba(0, 0, 51, 0.95))'),
-    new Project(
-      5,
-      'Signal',
-      'https://permits.floodauthority.org/',
-      'signal_logo.png',
-      // tslint:disable-next-line:max-line-length
-      'Custom tracking solutions and eCommerce site',
-      // tslint:disable-next-line:max-line-length
-      'Create a completely customizable tracking platform, ecommerce and native mobile app companion for the client to redistribute as their own service.',
-      'all the front end stuff',
-      ['Bootstrap 3', 'nopCommerce'],
-      [],
-      [],
-      'normal',
-      'rgba(223, 86, 64, 0.95)'),
-    new Project(
-      6,
-      'Texas Rebuilds',
-      'https://permits.floodauthority.org/',
-      'texas_rebuilds_logo.png',
-      // tslint:disable-next-line:max-line-length
-      'Hurricane Harvey recovery management system',
-      'FEMA needed a system built to manage the housing recovery efforts. For each role.',
-      'Built all front end UI/UX related items',
-      ['Bootstrap 4'],
-      [],
-      [],
-      'normal',
-      'rgba(17, 99, 203, 0.95)')
+      'rgba(0, 0, 0, 0.90)',
+      'rgb(0, 0, 0)')
   ];
-  public projectBannerPath: SafeStyle;
   public projectHeaderBackgroundColor: SafeStyle;
   projectName: string;
   projectProblem: string;
   projectSolution: string;
   projectContribution: string;
   projectTechnologies: string[];
-  projectScreenshots: string[];
+  projectScreenshots: ScreenShot[];
+  projectUrl: string;
 
   constructor(public dialog: MatDialog, private sanitization: DomSanitizer) { }
 
@@ -181,22 +206,19 @@ export class PortfolioComponent implements OnInit {
   }
 
   onClickProject(index: number): void {
-    // this.projects[index].state === 'normal' ? this.projects[index].state = 'exploded' : this.projects[index].state = 'normal';
-    // const previewElement = document.querySelector(`#project_${index} .preview`);
 
     // tslint:disable-next-line:max-line-length
-    this.projectBannerPath = this.sanitization.bypassSecurityTrustStyle(`url('../assets/images/projects/screenshots/${this.projects[index].screenshotPaths[0]}')`);
-    this.projectHeaderBackgroundColor = this.sanitization.bypassSecurityTrustStyle(`${this.projects[index].cardBackgroundColor}`);
+    this.projectHeaderBackgroundColor = this.sanitization.bypassSecurityTrustStyle(`${this.projects[index].dialogHeaderBackgroundColor}`);
     this.projectName = this.projects[index].name;
-    this.projectProblem = this.projects[index].name;
+    this.projectProblem = this.projects[index].description;
     this.projectSolution = this.projects[index].solution;
     this.projectContribution = this.projects[index].contribution;
     this.projectTechnologies = this.projects[index].technologiesUsed;
-    this.projectScreenshots = this.projects[index].screenshotPaths;
+    this.projectScreenshots = this.projects[index].screenshots;
+    this.projectUrl = this.projects[index].url;
 
     const dialogRef = this.dialog.open(PortfolioDialogComponent, {
       data: {
-        bannerPath: this.projectBannerPath,
         headerBackgroundColor: this.projectHeaderBackgroundColor,
         name: this.projectName,
         problem: this.projectProblem,
@@ -204,6 +226,7 @@ export class PortfolioComponent implements OnInit {
         contribution: this.projectContribution,
         technologies: this.projectTechnologies,
         screenshots: this.projectScreenshots,
+        url: this.projectUrl
       },
       width: '80vw'
     });

@@ -1,3 +1,5 @@
+import { ScreenShot } from './screenshot.model';
+
 export class Project {
   constructor(
     public id: number,
@@ -8,9 +10,9 @@ export class Project {
     public solution: string,
     public contribution: string,
     public technologiesUsed: string[],
-    public disciplines: string[],
-    public screenshotPaths: string[],
+    public screenshots: ScreenShot[],
     public state: string,
-    public cardBackgroundColor: string
+    public cardBackgroundColor: string,
+    public dialogHeaderBackgroundColor: string
   ) { }
 }

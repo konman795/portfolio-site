@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -23,7 +24,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PortfolioComponent, PortfolioDialogComponent } from './portfolio/portfolio.component';
+import {
+  PortfolioComponent,
+  PortfolioDialogComponent
+} from './portfolio/portfolio.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { AppService } from './app.service';
@@ -57,7 +61,8 @@ import { EmailService } from './email.service';
     MatFormFieldModule,
     MatInputModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   entryComponents: [PortfolioComponent, PortfolioDialogComponent],
   providers: [AppService, EmailService],

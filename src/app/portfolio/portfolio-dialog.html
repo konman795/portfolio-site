@@ -1,9 +1,9 @@
 <mat-dialog-content>
-  <!-- <div class="blurred-image" [style.background-image]="data.bannerPath"></div> -->
   <div class="container-fluid header" [style.background]="data.headerBackgroundColor">
     <div class="row align-items-center">
       <div class="col">
         <h2 class="mb-0" mat-dialog-title>{{ data.name }}</h2>
+        <a *ngIf="data.url" matTooltip="Visit the site." class="visit-site-link" [href]="data.url" target="_blank"><i class="fas fa-external-link-alt"></i></a>
       </div>
       <div class="col-auto">
         <button class="close-btn" mat-flat-button mat-dialog-close>
@@ -21,7 +21,7 @@
         </div>
         <div class="divider mb-3"></div>
         <div class="solution">
-          <h3>Answer.</h3>
+          <h3>Our Answer.</h3>
           <p>{{ data.solution }}</p>
         </div>
         <div class="divider mb-3"></div>
@@ -32,7 +32,7 @@
       </div>
       <div class="col-md-3">
         <div class="technologies">
-          <h3>Technologies Used.</h3>
+          <h3>Technologies I Used.</h3>
           <ul>
             <li *ngFor="let item of data.technologies">
               {{ item }}
@@ -44,9 +44,9 @@
   </div>
   <div class="project-screenshots">
     <mat-card *ngFor="let screenshot of data.screenshots">
-      <img class="img-fluid" src="../../assets/images/projects/screenshots/{{ screenshot }}">
-      <div class="img-caption">
-        <span>This is a test image caption</span>
+      <img class="img-fluid" src="../../assets/images/projects/screenshots/{{ screenshot.imagePath }}">
+      <div class="img-caption" [style.background]="data.headerBackgroundColor">
+        <span>{{ screenshot.caption }}</span>
       </div>
     </mat-card>
   </div>

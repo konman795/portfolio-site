@@ -40,7 +40,7 @@ import { Skill } from '../models/skill.model';
     ]),
     trigger('skillpod-list', [
       transition(':enter', [
-        query('@skillpod', stagger(150, animateChild()))
+        query('@skillpod', stagger(100, animateChild()))
       ])
     ]),
     trigger('bio-card', [
