@@ -10,7 +10,7 @@ export class AppService {
     private instagramURL = 'https://www.instagram.com/konkon_chao/';
     private navItems: NavItem[] = [
         new NavItem('Home', '/', 'home', 'green'),
-        new NavItem('About Me', 'about', 'info', 'orange'),
+        new NavItem('About', 'about', 'info', 'orange'),
         new NavItem('Portfolio', 'portfolio', 'folder', 'blue'),
         new NavItem('Contact', 'contact', 'contact_mail', 'purple')
     ];

@@ -74,6 +74,9 @@ export class AboutComponent implements OnInit {
     new Skill(3, 'Pixel Perfect', 'fas fa-eye', 'Bringing static mockups to life with unrivaled attention to detail.'),
     new Skill(4, 'Cutting Edge', 'fas fa-flag-checkered', 'The latest and bleeding edge tech for every new project.'),
   ];
+  siteTechnologies = [
+    'HTML5, CSS3, SASS, JavaScript ES6, Bootstrap 4 Grid, Angular 6, Angular Material, TypeScript'
+  ],
   languageFrameworks = [
     'HTML5',
     'CSS3',

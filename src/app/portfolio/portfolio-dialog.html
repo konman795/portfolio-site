@@ -1,4 +1,4 @@
-<mat-dialog-content>
+<mat-dialog-content [ngClass]="{ 'slfpa': data.name === 'Southeast LA Flood Protection Authority' }">
   <div class="container-fluid header" [style.background]="data.headerBackgroundColor">
     <div class="row align-items-md-center">
       <div class="col col-md-auto pr-0">
@@ -17,7 +17,7 @@
   </div>
   <div class="container-fluid body-content">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-lg-9">
         <div class="problem">
           <h3>The Problem.</h3>
           <p>{{ data.problem }}</p>
@@ -32,15 +32,14 @@
           <h3>What Was My Role?</h3>
           <p>{{ data.contribution }}</p>
         </div>
+        <div class="d-block d-lg-none divider mb-3"></div>
       </div>
-      <div class="col-md-3">
+      <div class="col-lg-3">
         <div class="technologies">
           <h3>Technologies I Used.</h3>
-          <ul>
-            <li *ngFor="let item of data.technologies">
-              {{ item }}
-            </li>
-          </ul>
+          <mat-chip-list>
+            <mat-chip *ngFor="let item of data.technologies" [style.background]="data.headerBackgroundColor">{{ item }}</mat-chip>
+          </mat-chip-list>
         </div>
       </div>
     </div>
