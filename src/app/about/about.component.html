@@ -54,22 +54,22 @@
     <div class="container">
       <mat-card [@skillset-card]>
         <h1>What Do I Know?</h1>
-        <p>Here are the languages and frameworks I roll with.</p>
+        <p>Languages and frameworks I roll with:</p>
         <mat-chip-list>
           <mat-chip selected *ngFor="let language of languageFrameworks">{{ language }}</mat-chip>
         </mat-chip-list>
         <div class="chip-list-divider"></div>
-        <p>The tools/tech that help me create outstanding products.</p>
+        <p>Tools and tech that help me create outstanding products:</p>
         <mat-chip-list>
           <mat-chip selected *ngFor="let tool of tools">{{ tool }}</mat-chip>
         </mat-chip-list>
         <div class="chip-list-divider"></div>
-        <p>Pre-packaged CMS's I've worked with. Because sometimes they work better for the client.</p>
+        <p>CMS's I've worked with:</p>
         <mat-chip-list>
           <mat-chip selected *ngFor="let cmsItem of cms">{{ cmsItem }}</mat-chip>
         </mat-chip-list>
         <div class="chip-list-divider"></div>
-        <p>General skillsets my peers have commended me for.</p>
+        <p>General skillsets my peers have commended me for:</p>
         <mat-chip-list>
           <mat-chip selected *ngFor="let skill of skillsets">{{ skill }}</mat-chip>
         </mat-chip-list>
