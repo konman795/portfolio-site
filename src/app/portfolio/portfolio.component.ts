@@ -146,11 +146,13 @@ export class PortfolioComponent implements OnInit {
       '',
       'signal_logo.png',
       // tslint:disable-next-line:max-line-length
-      'Custom tracking solutions and eCommerce site',
+      'Bambarger Intellictual Properties (BIP) had an idea for a fully customizable location tracking service. The client wanted the ability turn any iOS or Android phone/tablet into a tracking point, view these devices and manage them from a web interface. They also wanted an easy way to sell and distribute the service efficiently.',
       // tslint:disable-next-line:max-line-length
-      'Create a completely customizable tracking platform, ecommerce and native mobile app companion for the client to redistribute as their own service.',
-      'all the front end stuff',
-      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 3', 'ASP.NET MVC', 'Razor C#', 'T-SQL', 'Google Maps API'],
+      'Our team started by working with the client on their expectations and what could be accomplished in the timeframe they have in mind. The web app gave the client the ability to register and customize everything from displaying their own logo in the header/footer to choosing the color scheme of their web application when logged in. A "monitor" could then access the customized Google Maps view showing the live location of every registered device. Admin and superadmin roles allowed them to control and edit everything as well as impersonate other accounts/brands. After the main tracking components and apps were completed, we built an eCommerce site based on nopCommerce for the client to automate the selling process.',
+      // tslint:disable-next-line:max-line-length
+      'My role in this project involved setting up the initial front end file structure and bringing the static mockups for the entire web app to life. There were concerns about the UI not taking advantage of the screen space in multiple instances and unintutive UX I helped resolve. My favorite challenges for this project involved working with the Google Maps API to help build/optimize the tracking UI, setting up the customized brand themes based on the individual brand settings, and theming the eCommerce site.',
+      // tslint:disable-next-line:max-line-length
+      ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 3', 'ASP.NET MVC', 'Razor C#', 'T-SQL', 'Google Maps API', 'nopCommerce'],
       [
         new ScreenShot('signal_login.jpg', 'Signal login portal.'),
         new ScreenShot('signal_add_brand.jpg', 'Signal Monitor\'s live tracking map view after logging in.'),
@@ -165,10 +167,12 @@ export class PortfolioComponent implements OnInit {
       'https://portal.mypulsario.com/',
       'pulsario_logo.png',
       // tslint:disable-next-line:max-line-length
-      'Helping people with heart problems or something.',
-      'Heart risk management with doctor and patient via a web portal',
-      'all the front end stuff, and rebranding',
-      ['HTML5', 'Bootstrap 3'],
+      'Prevail Heart Clinics needed a way to communicate with patients that had heart problems and were unable to physically make it to appointments. They needed a effective way to monitor patients remotely. That\'s when the idea of developing a web and mobile app for tracking patients\' health statuses surfaced.',
+      // tslint:disable-next-line:max-line-length
+      'Our team worked with Prevail Heart Clinics to design and develop a solution. It would consist of a web app accompanied by an iOS and Android app. The patient could easily update their status using the web or mobile app so their doctor could view and assess their wellbeing remotely. We also implemented a full featured communications system so the patient and doctor could communicate with each other directly from within the app. ',
+      // tslint:disable-next-line:max-line-length
+      'I was responsible for all the front end aspects of this project. I created the public facing site based on the mockups provided by our designers. The biggest challenge came with the internal web application development. The back end development was moving faster than I was so many of the views were being created first and I went in afterwards to integrate them. It was a chance to think in a different way than I am normally use to. A few months after the site and application launched, they went through a rebranding. I was tasked with handling all the UI rebranding for the web app.',
+      ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Bootstrap 3', 'ASP.NET MVC', 'Razor C#', 'T-SQL'],
       [
         new ScreenShot('pulsario_login.jpg', 'Pulsario login portal.'),
         new ScreenShot('pulsario_dashboard.jpg', 'Provider dashboard view after logging in.'),
@@ -183,11 +187,13 @@ export class PortfolioComponent implements OnInit {
       'https://www.uhigh.lsu.edu/',
       'uhigh_logo.png',
       // tslint:disable-next-line:max-line-length
-      'The University Laboratory School community aspires towards total effort in every endeavor for maximum student achievement through the development, implementation, and demonstration of exemplary programs and instructional practices.',
+      'University Laboratory School approached our team when they wanted to completely redesign their website. Not only did they want the site redesigned, they wanted an easy way to manage and edit every page, create calendar events with custom tags/categories and give faculty/staff members the ability to request events.',
       // tslint:disable-next-line:max-line-length
-      'After obtaining requirements, we decided to integrate with the DNN (Dot Net Nuke) CMS. DNN was a perfect match being a beautiful prepackaged CMS UI/UX already and easy integration with our framework. Provided a form request system, calendar and page creation with custom modules.',
-      'my contribution to this project:',
-      ['HTML5', 'CSS3', 'SASS'],
+      'After consulting and brainstorming with the client, our team went to work on the redesign. We decided to take a pre-packaged CMS, DotNetNuke (DNN) and integrate our own templates and modules into it. DNN integrated well with the framework we were using and also provided a great out of the box experience for content/account management. A calendar module was developed with the ability to assign custom tags for events. An event request system with the ability to save and finish later was created to simplify and expedite the event approval process.',
+      // tslint:disable-next-line:max-line-length
+      'I was tasked with the research and setting up of DNN before the project kicked off because it was the first time our team was working with DNN. When the project got the green light, I went to work customing, theming and creating views within DNN based on the mockups from our designers. Along with the desktop web app, I also optimized the site for mobile views. The biggest challenge I encountered was actually figuring out the ins and outs of DNN so I could integrate my work correctly. I am use to starting from scratch so this was a welcome challenge.',
+      // tslint:disable-next-line:max-line-length
+      ['HTML5', 'CSS3', 'SASS', 'JavaScript', 'jQuery', 'jQuery UI', 'Bootstrap 3', 'ASP.NET MVC', 'Razor C#', 'DotNetNuke (DNN)'],
       [
         new ScreenShot('uhigh_home_2.jpg', 'University Laboratory School homepage.'),
         new ScreenShot('uhigh_interior_page_2.jpg', 'ULS interior page view.'),
