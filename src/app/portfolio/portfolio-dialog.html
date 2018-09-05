@@ -19,12 +19,8 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="problem">
-          <h3>The Problem.</h3>
+          <h3>Project Background.</h3>
           <p>{{ data.problem }}</p>
-        </div>
-        <div class="divider mb-3"></div>
-        <div class="solution">
-          <h3>Our Answer.</h3>
           <p>{{ data.solution }}</p>
         </div>
         <div class="divider mb-3"></div>
@@ -36,7 +32,7 @@
       </div>
       <div class="col-lg-3">
         <div class="technologies">
-          <h3>Technologies I Used</h3>
+          <h3>Technologies I Utilized</h3>
           <mat-chip-list>
             <mat-chip *ngFor="let item of data.technologies" [style.background]="data.headerBackgroundColor">{{ item }}</mat-chip>
           </mat-chip-list>
