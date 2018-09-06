@@ -9,14 +9,14 @@ import { AppService } from '../app.service';
 export class FooterComponent implements OnInit {
   fbURL: string;
   instagramURL: string;
-  twitterURL: string;
+  linkedInURL: string;
 
   constructor(private appService: AppService) { }
 
   ngOnInit() {
     this.fbURL = this.appService.getfbURL();
     this.instagramURL = this.appService.getInstagramURL();
-    this.twitterURL = this.appService.getTwitterURL();
+    this.linkedInURL = this.appService.getLinkedInURL();
   }
 
 }
