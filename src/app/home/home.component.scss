@@ -1,67 +1,81 @@
+@import "~@angular/material/theming";
+@import "../../stylesheets/variables";
+
 #home-panel {
-    height: calc(100vh - 56px);
-    color: white;
-    span {
-        line-height: 1em;
-        font-size: 3rem;
-        font-weight: 300;
-    }
-    span.subtext {
-        font-size: 2.6rem;
-    }
-    span.normal {
-        font-size: 2.6rem;
-        font-weight: 500;
-    }
-    .mat-flat-button {
-        font-size: 1.5rem;
-        padding: 0.5em 1em;
-    }
-    .button-container {
-        margin-top: 1.5rem;
-    }
-    .white-border {
-        width: 55rem;
-        height: 2px;
-        background-color: white;
-        margin: 2.5rem auto 0;
-    }
+  height: calc(100vh - 56px);
+  color: white;
+  span {
+    line-height: 1em;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  span.subtext {
+    font-size: 2.6rem;
+  }
+  span.normal {
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+  .mat-flat-button {
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+  }
+  .button-container {
+    margin-top: 1.5rem;
+  }
+  .white-border {
+    width: 55rem;
+    height: 2px;
+    background-color: white;
+    margin: 2.5rem auto 0;
+  }
+}
+.white-box-container {
+  position: absolute;
+  height: calc(100vh - 56px);
+  width: 100%;
+}
+.white-box {
+  background-color: $primary;
+  height: calc(100vh - 56px);
+  width: 100%;
+  clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
 }
 @media (max-width: 767px) {
-    #home-panel {
-        span {
-            font-size: 1.8rem;
-        }
-        span.subtext {
-            font-size: 1.2rem;
-            line-height: 1.25em;
-        }
-        span.normal {
-            font-size: 1.2rem;
-        }
-        .white-border {
-            margin: 1.5rem auto 0;
-            width: 16rem;
-        }
-        .mat-flat-button {
-            font-size: 1rem;
-        }
-        .button-container {
-            margin-top: 1rem;
-        }
+  #home-panel {
+    span {
+      font-size: 1.8rem;
     }
+    span.subtext {
+      font-size: 1.2rem;
+      line-height: 1.25em;
+    }
+    span.normal {
+      font-size: 1.2rem;
+    }
+    .white-border {
+      margin: 1.5rem auto 0;
+      width: 16rem;
+    }
+    .mat-flat-button {
+      font-size: 1rem;
+    }
+    .button-container {
+      margin-top: 1rem;
+    }
+  }
 }
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    #home-panel {
-        .white-border {
-            width: 30rem;
-        }
-        span.subtext {
-            font-size: 2.3rem;
-            line-height: 1.2em;
-        }
-        span.normal {
-            font-size: 2.3rem;
-        }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #home-panel {
+    .white-border {
+      width: 30rem;
     }
- }
+    span.subtext {
+      font-size: 2.3rem;
+      line-height: 1.2em;
+    }
+    span.normal {
+      font-size: 2.3rem;
+    }
+  }
+}

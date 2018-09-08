@@ -59,17 +59,6 @@ footer {
   color: white;
   padding: 1rem 0;
 }
-.white-box-container {
-  position: absolute;
-  height: calc(100vh - 56px);
-  width: 100%;
-}
-.white-box {
-  background-color: $primary;
-  height: calc(100vh - 56px);
-  width: 100%;
-  clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
-}
 mat-dialog-container.mat-dialog-container {
   padding: 0;
 }
@@ -106,7 +95,7 @@ app-portfolio-dialog {
     color: white;
     position: fixed;
     width: 80vw;
-    z-index: 100;
+    z-index: 9999;
     @include mat-elevation(6);
 
     .mat-dialog-title {

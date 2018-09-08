@@ -19,11 +19,10 @@ import {
   animations: [
     trigger('white-box', [
       state(':enter', style({
-        'clip-path': 'polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%)'
       })),
       transition('void => *', [
         style({
-          'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
+          'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         }),
         animate('0.8s 0.5s cubic-bezier(0.4, 0.0, 0.2, 1)')
       ])
