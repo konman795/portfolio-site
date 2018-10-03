@@ -228,7 +228,7 @@ export class PortfolioComponent implements OnInit {
     this.projectTechnologies = this.projects[index].technologiesUsed;
     this.projectScreenshots = this.projects[index].screenshots;
     this.projectUrl = this.projects[index].url;
-    
+
     const dialogRef = this.dialog.open(PortfolioDialogComponent, {
       data: {
         headerBackgroundColor: this.projectHeaderBackgroundColor,
